@@ -130,7 +130,7 @@ class TextbookLinker:
 
 st.set_page_config(page_title="Textbook Problem Linker", layout="wide")
 
-st.title("📖 Interactive Textbook")
+st.title("📖 FastBook")
 info_button = st.button('ℹ️ Info')
 
 info_message = """
