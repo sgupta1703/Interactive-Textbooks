@@ -139,6 +139,21 @@ class TextbookLinker:
             self.writer.write(output_file)
 
 st.title("📖 FastBook")
+info_button = st.button('ℹ️ Info')
+
+info_message = """
+This application scans a textbook PDF for questions formatted as 'X. ' (number followed by a dot and space)
+and hyperlinks them for easier navigation.
+"""
+
+if 'info_opened' not in st.session_state:
+    st.session_state.info_opened = False
+
+if info_button:
+    st.session_state.info_opened = not st.session_state.info_opened
+
+if st.session_state.info_opened:
+    st.info(info_message)
 st.sidebar.header("💬 Provide Feedback")
 name = st.sidebar.text_input("Your Name")
 email = st.sidebar.text_input("Your Email")
