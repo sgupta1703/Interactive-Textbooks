@@ -154,6 +154,7 @@ if info_button:
 
 if st.session_state.info_opened:
     st.info(info_message)
+    
 st.sidebar.header("💬 Provide Feedback")
 name = st.sidebar.text_input("Your Name")
 email = st.sidebar.text_input("Your Email")
